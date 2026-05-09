@@ -41,7 +41,7 @@ It contains generic prebuilt firmware images. No personal Wi-Fi password, device
 
 Cards are not bundled in this download. Hubyt downloads cards from the card registry inside the app.
 
-Hubyt cards are available at: https://github.com/bptworld/hubyt-cards
+Hubyt cards are available in the [Hubyt Cards](https://github.com/bptworld/hubyt-cards) repository.
 
 ## Card Creation
 
