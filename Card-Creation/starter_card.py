@@ -2,7 +2,7 @@ from io import BytesIO
 
 CARD_ID = "starter"
 CARD_NAME = "Starter"
-CARD_DETAIL = "Example Hubyt card"
+CARD_DETAIL = "Example Pixora card"
 CARD_OPTIONS = [
     {
         "key": "message",

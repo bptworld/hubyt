@@ -1,8 +1,8 @@
-# Creating Hubyt Cards
+# Creating Pixora Cards
 
-Hubyt cards are small Python files that render a `64 x 32` image for the display.
+Pixora cards are small Python files that render a `64 x 32` image for the display.
 
-Cards are downloaded by Hubyt from a GitHub card registry, then stored locally in the user's `addons` folder.
+Cards are downloaded by Pixora from a GitHub card registry, then stored locally in the user's `addons` folder.
 
 ## What A Card Needs
 
@@ -65,7 +65,7 @@ weather_forecast.py
 
 ### `CARD_NAME`
 
-Friendly name shown in Hubyt:
+Friendly name shown in Pixora:
 
 ```python
 CARD_NAME = "Weather Forecast"
@@ -81,7 +81,7 @@ CARD_DETAIL = "Today and tomorrow"
 
 ## Card Options
 
-Options let users configure cards from the Hubyt app.
+Options let users configure cards from the Pixora app.
 
 Example:
 
@@ -109,7 +109,7 @@ def render(options=None):
 Common option fields:
 
 - `key`: value name passed into `render(options)`
-- `label`: label shown in the Hubyt UI
+- `label`: label shown in the Pixora UI
 - `type`: usually `text`
 - `default`: default value
 - `maxlength`: optional input length limit
@@ -117,7 +117,7 @@ Common option fields:
 
 ## Rendering Rules
 
-Hubyt displays are tiny. Design for:
+Pixora displays are tiny. Design for:
 
 - `64 x 32` pixels
 - high contrast
@@ -136,7 +136,7 @@ return out.getvalue()
 
 ## Fetching Internet Data
 
-Cards can fetch internet data from the Windows Hubyt server while rendering.
+Cards can fetch internet data from the Windows Pixora server while rendering.
 
 Use Python's built-in libraries when possible:
 
@@ -146,7 +146,7 @@ import urllib.request
 
 
 def fetch_json(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "Hubyt Card"})
+    req = urllib.request.Request(url, headers={"User-Agent": "Pixora Card"})
     with urllib.request.urlopen(req, timeout=8) as resp:
         return json.loads(resp.read())
 ```
@@ -164,7 +164,7 @@ _CACHE = {
 
 ## Registry Entry
 
-To make a card downloadable in Hubyt, add it to the card registry:
+To make a card downloadable in Pixora, add it to the card registry:
 
 ```json
 {
@@ -175,7 +175,7 @@ To make a card downloadable in Hubyt, add it to the card registry:
   "description": "Shows HELLO on the display.",
   "author": "your-name",
   "version": "1.0",
-  "url": "https://raw.githubusercontent.com/your-name/hubyt-cards/main/addons/hello.py"
+  "url": "https://raw.githubusercontent.com/your-name/pixora-cards/main/addons/hello.py"
 }
 ```
 
@@ -184,7 +184,7 @@ The `url` must point directly to the raw `.py` file.
 ## Suggested GitHub Layout
 
 ```text
-hubyt-cards/
+pixora-cards/
   registry.json
   addons/
     hello.py
@@ -193,9 +193,9 @@ hubyt-cards/
 
 ## Testing A Card
 
-1. Put the card `.py` file in Hubyt's local `addons` folder.
-2. Restart Hubyt.
-3. Open the Hubyt app.
+1. Put the card `.py` file in Pixora's local `addons` folder.
+2. Restart Pixora.
+3. Open the Pixora app.
 4. Add the card to a device.
 5. Watch the device or preview endpoint.
 
@@ -203,7 +203,7 @@ For registry testing:
 
 1. Push the card to GitHub.
 2. Add it to `registry.json`.
-3. In Hubyt, open **Browse Cards**.
+3. In Pixora, open **Browse Cards**.
 4. Set the registry source if needed.
 5. Install the card.
 
