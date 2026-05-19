@@ -1,5 +1,15 @@
-# Pixora
+# Pixora 
+*noun* | **pix-or-a**
 
+A connected display platform for turning live data, alerts, messages, and personal dashboards into pixel-perfect cards across one or many screens.
+
+**Definition:**  
+A system that collects useful information from apps, services, devices, and the internet, then presents it as clear, glanceable pixel displays.
+
+**Origin:**  
+From **pix**, meaning pixels or small points of light, and **aura**, suggesting the ambient flow of information around a space.
+
+## About
 Pixora is a Windows app and firmware package for reusing Tidbyt-style LED matrix displays without the original Tidbyt cloud.
 
 ## Download
